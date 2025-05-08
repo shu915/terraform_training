@@ -62,7 +62,7 @@ resource "aws_db_instance" "mysql_standalone" {
 
   deletion_protection = true
   skip_final_snapshot = true
-  apply_immediately = true
+  apply_immediately   = true
 
   tags = {
     Name        = "${var.project}-${var.environment}-mysql-standalone"

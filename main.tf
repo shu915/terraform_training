@@ -9,6 +9,11 @@ terraform {
       version = "~> 3.0"
     }
   }
+  backend "s3" {
+    bucket = "terraform-training-shu"
+    key    = "terraform.tfstate"
+    region = "ap-northeast-1"
+  }
 }
 
 # ---------------------------------------------

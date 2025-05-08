@@ -4,7 +4,7 @@ data "aws_prefix_list" "s3_prefix_list" {
 
 data "aws_ami" "app" {
   most_recent = true
-  owners = ["self", "amazon"]
+  owners      = ["self", "amazon"]
 
   filter {
     name = "name"
@@ -13,20 +13,20 @@ data "aws_ami" "app" {
   }
 
   filter {
-    name = "root-device-type"
+    name   = "root-device-type"
     values = ["ebs"]
   }
 
   filter {
-    name = "virtualization-type"
+    name   = "virtualization-type"
     values = ["hvm"]
   }
 
   filter {
-    name = "architecture"
+    name   = "architecture"
     values = ["x86_64"]
   }
-  
-  
-  
+
+
+
 }
