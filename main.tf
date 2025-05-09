@@ -24,6 +24,11 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
+provider "aws" {
+  alias  = "virginia"
+  region = "us-east-1"
+}
+
 # ---------------------------------------------
 # Variables
 # ---------------------------------------------
@@ -32,5 +37,13 @@ variable "project" {
 }
 
 variable "environment" {
+  type = string
+}
+
+variable "domain" {
+  type = string
+}
+
+variable "user_arn" {
   type = string
 }
