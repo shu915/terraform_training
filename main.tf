@@ -43,7 +43,3 @@ variable "environment" {
 variable "domain" {
   type = string
 }
-
-variable "user_arn" {
-  type = string
-}
