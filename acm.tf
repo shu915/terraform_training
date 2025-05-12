@@ -1,5 +1,5 @@
 resource "aws_acm_certificate" "tokyo_cert" {
-  domain_name       = var.domain
+  domain_name       = "*.${var.domain}"
   validation_method = "DNS"
 
 
@@ -40,7 +40,7 @@ resource "aws_acm_certificate_validation" "sert_valid" {
 
 resource "aws_acm_certificate" "virginia_cert" {
   provider          = aws.virginia
-  domain_name       = var.domain
+  domain_name       = "*.${var.domain}"
   validation_method = "DNS"
 
 
